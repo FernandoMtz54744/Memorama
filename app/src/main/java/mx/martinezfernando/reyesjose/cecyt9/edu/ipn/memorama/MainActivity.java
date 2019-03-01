@@ -1,5 +1,6 @@
 package mx.martinezfernando.reyesjose.cecyt9.edu.ipn.memorama;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -200,5 +201,17 @@ public class MainActivity extends AppCompatActivity {
         for(int i = 0; i < 16; i++){
             botones.get(i).setClickable(false);
         }
+    }
+
+    public void restart(View v) {
+        Intent i = new Intent(this, MainActivity.class);
+        finish();
+        startActivity(i);
+    }
+
+    public void regresar(View v) {
+        Intent i = new Intent(this, Menu.class);
+        finish();
+        startActivity(i);
     }
 }

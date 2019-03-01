@@ -212,8 +212,21 @@
             android:gravity="center"
             android:text="00:00"
             android:textSize="24sp"
-            app:layout_column="1"
+            app:layout_column="0"
             app:layout_columnSpan="2"
+            app:layout_row="4" />
+
+        <Button
+            android:id="@+id/rest"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:backgroundTint="@color/colorBotin"
+            android:onClick="restart"
+            android:text="Restart"
+            android:textColor="@android:color/background_light"
+            android:textSize="12sp"
+            app:layout_column="2"
             app:layout_row="4" />
 
         <Button
@@ -222,7 +235,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:backgroundTint="@color/colorBotin"
-            android:onClick="regreso"
+            android:onClick="regresar"
             android:text="Atras"
             android:textColor="@android:color/background_light"
             app:layout_column="3"

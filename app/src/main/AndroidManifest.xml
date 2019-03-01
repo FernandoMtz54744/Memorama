@@ -13,6 +13,7 @@
 
         </activity>
         <activity android:name=".Puntajes" />
+
         <activity android:name=".Menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
