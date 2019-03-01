@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         botones.add(b16c);
 
         revolver();
-
+        hand.postDelayed(tiempo, 1000);
     }
 
     public void revolver(){
@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
     public void voltear(View v){
         tag = v.getTag().toString();
         id = v.getId();
+        findViewById(id).setClickable(false);
 
         if(tag.equals("ix1")){
             findViewById(id).setBackgroundResource(R.drawable.ix1);
@@ -143,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
         if(correcto == 8){
             //parar tiempo, el jugador ha terminado
             Toast.makeText(this, "Has Ganado :)", Toast.LENGTH_SHORT).show();
+            hand.removeCallbacks(tiempo);
         }
     }
 
@@ -151,6 +153,8 @@ public class MainActivity extends AppCompatActivity {
             public void run(){
             findViewById(id).setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.colorAccent));
             findViewById(idAnterior).setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.colorAccent));
+            //se habilitan todos los botones
+            habilitar();
             }
     };
 
@@ -163,8 +167,10 @@ public class MainActivity extends AppCompatActivity {
                 correcto++;
                 anterior = false;
             }else{
+                //deshabilitan todos los botones aqui
+                deshabilitar();
                 //se deben voltear ambas imagenes despues de un tiempo
-                hand.postDelayed(voltearNuevamente, 1500);
+                hand.postDelayed(voltearNuevamente, 1000);
                 anterior = false;
             }
         }else{
@@ -175,4 +181,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    Runnable tiempo = new Runnable() {
+        @Override
+        public void run() {
+            segundos++;
+            timer.setText(Integer.toString(segundos) + " segundos");
+            hand.postDelayed(tiempo, 1000);
+        }
+    };
+
+    public void habilitar(){
+        for(int i = 0; i < 16; i++){
+            botones.get(i).setClickable(true);
+        }
+    }
+
+    public void deshabilitar(){
+        for(int i = 0; i < 16; i++){
+            botones.get(i).setClickable(false);
+        }
+    }
 }
