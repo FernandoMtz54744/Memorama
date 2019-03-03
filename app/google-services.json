@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "108627432425",
+    "firebase_url": "https://memorama-81e36.firebaseio.com",
+    "project_id": "memorama-81e36",
+    "storage_bucket": "memorama-81e36.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108627432425:android:1f536fcf2b110bb7",
+        "android_client_info": {
+          "package_name": "mx.martinezfernando.reyesjose.cecyt9.edu.ipn.memorama"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108627432425-8tl1lac3mg9266srmp3ep8o9jq726lod.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.martinezfernando.reyesjose.cecyt9.edu.ipn.memorama",
+            "certificate_hash": "1d882716a2fe714ce04133cc66a78bb36ab7fb8b"
+          }
+        },
+        {
+          "client_id": "108627432425-ti9pvsopgejdfg2rb2mdh4sljijqumjl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDd0Hq1dTqo7rcL0ePoc3ESHxPjMjoirNc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108627432425-ti9pvsopgejdfg2rb2mdh4sljijqumjl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
