@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
             //parar tiempo, el jugador ha terminado
             Toast.makeText(this, "Has Ganado :)", Toast.LENGTH_SHORT).show();
             hand.removeCallbacks(tiempo);
-            RegistroDialog dialog = new RegistroDialog().setMensaje(Integer.toString(segundos) + " segundos");
+            RegistroDialog dialog = new RegistroDialog().setMensaje(Integer.toString(segundos) + " sec");
             dialog.show(getFragmentManager(), "register_dialog");
         }
     }
