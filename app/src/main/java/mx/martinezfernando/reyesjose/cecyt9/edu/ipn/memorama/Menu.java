@@ -29,4 +29,9 @@ public class Menu extends AppCompatActivity {
         finish();
         startActivity(i);
     }
+
+    public void info(View v) {
+        InfoDialog i = new InfoDialog();
+        i.show(getFragmentManager(), "info");
+    }
 }
